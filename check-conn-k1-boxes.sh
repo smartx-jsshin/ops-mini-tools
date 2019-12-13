@@ -27,7 +27,7 @@ print_success_result(){
   BOX_IP=$2
   BOX_NAME=$3
   if [ ${PRINT_MODE} == "all" ] || [ ${PRINT_MODE} == "success" ]; then
-    MSG="[${TEST}]${SUCCESS_COLOR}[SUCCESS] ${BOX_NAME} (${BOX_IP})${NORMAL_COLOR}"
+    MSG="[${TEST}] ${SUCCESS_COLOR}[SUCCESS] ${BOX_NAME} (${BOX_IP})${NORMAL_COLOR}"
     echo -e ${MSG}
   fi
 }
@@ -37,7 +37,7 @@ print_fail_result() {
   BOX_IP=$2
   BOX_NAME=$3
   if [ ${PRINT_MODE} == "all" ] || [ ${PRINT_MODE} == "fail" ]; then
-    MSG="[${TEST}]${FAIL_COLOR}[FAIL] ${BOX_NAME} (${BOX_IP})${NORMAL_COLOR}"
+    MSG="[${TEST}] ${FAIL_COLOR}[FAIL]\t ${BOX_NAME} (${BOX_IP})${NORMAL_COLOR}"
     echo -e ${MSG}
   fi
 }
